@@ -305,7 +305,7 @@
                 A futuristic approach to timeless celebrations. Where expansive lawns meet architectural brilliance on the Rohtak-Delhi Highway.
             </p>
             
-            <div class="flex flex-col md:flex-row gap-6 justify-center reveal-up" style="transition-delay: 400ms;">
+            <div class="flex flex-col md:flex-row gap-6 justify-center md:items-center reveal-up" style="transition-delay: 400ms;">
                 <a href="#contact" class="group relative px-10 py-4 bg-champagne-dark text-midnight font-bold tracking-widest uppercase overflow-hidden hover-trigger">
                     <span class="relative z-10">Plan Your Event</span>
                     <div class="absolute inset-0 bg-white transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
@@ -439,10 +439,13 @@
         <div class="container mx-auto px-6">
              <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal-up">
                 <div>
-                    <h2 class="font-serif text-4xl md:text-6xl text-white">World Class <br/><span class="italic text-gray-500">Amenities</span></h2>
+                    <!-- Updated alignment for the heading -->
+                    <h2 class="font-serif text-4xl md:text-6xl text-white text-left">
+                        World Class <br/><span class="italic text-gray-500">Amenities</span>
+                    </h2>
                 </div>
                 <div class="mt-8 md:mt-0">
-                    <p class="text-gray-400 max-w-md text-right">Designed for comfort, engineered for luxury. Every facility you need for a seamless event.</p>
+                    <p class="text-gray-400 max-w-md text-left md:text-right">Designed for comfort, engineered for luxury. Every facility you need for a seamless event.</p>
                 </div>
             </div>
 
@@ -477,11 +480,11 @@
             </div>
             
             <div class="relative">
-                <!-- Navigation Arrows -->
-                <button id="gallery-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-midnight/70 p-4 rounded-r-full text-champagne-dark text-xl transition-all hover:bg-champagne-dark hover:text-midnight focus:outline-none hover-trigger hidden md:block">
+                <!-- Navigation Arrows (Now visible on ALL sizes) -->
+                <button id="gallery-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-midnight/70 p-4 rounded-r-full text-champagne-dark text-xl transition-all hover:bg-champagne-dark hover:text-midnight focus:outline-none hover-trigger">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <button id="gallery-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-midnight/70 p-4 rounded-l-full text-champagne-dark text-xl transition-all hover:bg-champagne-dark hover:text-midnight focus:outline-none hover-trigger hidden md:block">
+                <button id="gallery-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-midnight/70 p-4 rounded-l-full text-champagne-dark text-xl transition-all hover:bg-champagne-dark hover:text-midnight focus:outline-none hover-trigger">
                     <i class="fas fa-chevron-right"></i>
                 </button>
 
@@ -619,7 +622,8 @@
                         </p>
                     </div>
                     
-                    <div class="mt-10 h-48 w-full rounded-xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-500 hover-trigger">
+                    <!-- Removed grayscale and hover:grayscale-0 classes to make the map color -->
+                    <div class="mt-10 h-48 w-full rounded-xl overflow-hidden border border-white/10 transition-all duration-500 hover-trigger">
                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13994.262771043515!2d76.6300!3d28.8600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDUxJzM2LjAiTiA3NsKwMzcnNDguMCJF!5e0!3m2!1sen!2sin!4v1625555555555!5m2!1sen!2sin&q=NH-09+Rohtak+Delhi+Rd+Kharawar+Haryana" 
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
@@ -643,7 +647,7 @@
 
     <!-- JavaScript Logic -->
     <script>
-        // 1. Custom Cursor Logic
+        // 1. Custom Cursor Logic (Hidden on mobile via CSS)
         const cursorDot = document.querySelector('.cursor-dot');
         const cursorOutline = document.querySelector('.cursor-outline');
         
