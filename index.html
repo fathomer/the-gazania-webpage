@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>The Gazania | Ultra-Modern Wedding Venue & Party Lawns</title>
+    <meta name="description" content="The Gazania: Rohtak's most luxurious wedding venue featuring modern architecture, sprawling lawns, and premium amenities on NH-09.">
+    
+    <!-- Open Graph Tags (For social media sharing) -->
+    <meta property="og:title" content="The Gazania: Luxury Party Lawns & Banquets in Rohtak" />
+    <meta property="og:description" content="Book your wedding, corporate event, or social gathering at Rohtak's premier, ultra-modern venue on NH-09." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.thegazania.com" /> <!-- Replace with actual URL -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519225421980-715cb0202128?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheGazania"> <!-- Replace with actual Twitter handle -->
+    <meta name="twitter:title" content="The Gazania: Ethereal Luxury Events">
+    <meta name="twitter:description" content="Rohtak's ultra-modern venue for weddings and grand events. Inquire today!">
+
+    <!-- JSON-LD Structured Data (Crucial for Local SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EventVenue",
+      "name": "The Gazania: Party Lawns & Banquets",
+      "description": "Rohtak's most luxurious wedding venue featuring modern architecture, sprawling lawns, and premium amenities on NH-09. Perfect for weddings, corporate galas, and social events.",
+      "url": "http://www.thegazania.com",
+      "image": "https://images.unsplash.com/photo-1519225421980-715cb0202128?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NH-09, Rohtak - Delhi Rd, Near Sai Mandir, Kharawar",
+        "addressLocality": "Kharawar",
+        "addressRegion": "Haryana",
+        "postalCode": "124021",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-98765-43210",
+      "priceRange": "$$$$"
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        champagne: {
+                            light: '#FDFCF5',
+                            DEFAULT: '#E8D69E',
+                            dark: '#C5A059',
+                        },
+                        midnight: '#0B0F19',
+                        charcoal: '#1A1F2B'
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #E8D69E 0%, #C5A059 100%)',
+                        'dark-gradient': 'linear-gradient(to bottom, #0B0F19, #1A1F2B)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- Extreme CSS & Custom Effects --- */
+
+        /* 1. Custom Cursor */
+        body {
+            cursor: none;
+        }
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #C5A059;
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(197, 160, 89, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        body:hover .cursor-outline {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(197, 160, 89, 0.1);
+        }
+
+        /* 2. Film Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9000;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* 3. Typography & Text Effects */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #F9F1D8, #C5A059, #A6823C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .stroked-text {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+            transition: all 0.5s ease;
+        }
+        .group:hover .stroked-text {
+            -webkit-text-stroke: 1px #C5A059;
+            color: rgba(197, 160, 89, 0.1);
+        }
+
+        /* 4. Glassmorphism Utilities */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* 5. Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 6. Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 7. Smooth Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C5A059; }
+
+        /* 8. Gallery Slider Styles */
+        .gallery-scroll-container {
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+        }
+        .gallery-scroll-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
+        .gallery-item {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 90vw; /* Full width on mobile viewport for better snapping */
+            height: 60vh; /* Fixed height for sliding effect */
+        }
+        @media (min-width: 768px) {
+            /* Show approx 3 items on tablet/desktop */
+            .gallery-item {
+                width: calc(33.333333% - 1.5rem); 
+            }
+        }
+        @media (min-width: 1024px) {
+            /* Show approx 4 items on large screens */
+            .gallery-item {
+                width: calc(25% - 1rem); 
+            }
+        }
+    </style>
+</head>
+<body class="bg-midnight text-gray-300 overflow-x-hidden selection:bg-champagne-dark selection:text-white">
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+    
+    <!-- Film Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-500 glass-nav" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group z-50 hover-trigger">
+                <div class="w-12 h-12 relative flex items-center justify-center">
+                    <div class="absolute inset-0 border border-champagne-dark rounded-full animate-spin-slow" style="animation-duration: 10s;"></div>
+                    <span class="font-serif text-2xl font-bold text-champagne-dark">G</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl tracking-wider text-white group-hover:text-champagne-dark transition-colors">GAZANIA</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm uppercase tracking-widest hover:text-champagne-dark transition-all hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-champagne-dark after:transition-all hover:after:w-full">Home</a>
+                <a href="#about" class="text-sm uppercase tracking-widest hover:text-champagne-dark transition-all hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-champagne-dark after:transition-all hover:after:w-full">Story</a>
+                <a href="#services" class="text-sm uppercase tracking-widest hover:text-champagne-dark transition-all hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-champagne-dark after:transition-all hover:after:w-full">Experience</a>
+                <a href="#gallery" class="text-sm uppercase tracking-widest hover:text-champagne-dark transition-all hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-champagne-dark after:transition-all hover:after:w-full">Gallery</a>
+                
+                <a href="#contact" class="px-8 py-3 border border-champagne-dark/50 text-champagne-dark hover:bg-champagne-dark hover:text-midnight transition-all duration-300 uppercase text-xs tracking-[0.2em] hover-trigger">
+                    Book Tour
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl hover-trigger">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-midnight z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-500">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#home" class="font-serif text-4xl text-white hover:text-champagne-dark">Home</a>
+            <a href="#about" class="font-serif text-4xl text-white hover:text-champagne-dark">Story</a>
+            <a href="#services" class="font-serif text-4xl text-white hover:text-champagne-dark">Services</a>
+            <a href="#gallery" class="font-serif text-4xl text-white hover:text-champagne-dark">Gallery</a>
+            <a href="#contact" class="font-serif text-4xl text-champagne-dark">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Parallax) -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0202128?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                 alt="Grand banquet hall decorated with flowers for a luxury wedding reception." 
+                 class="w-full h-full object-cover opacity-60 fixed-bg scale-110 animate-ken-burns">
+            <div class="absolute inset-0 bg-gradient-to-b from-midnight/30 via-midnight/50 to-midnight"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            
+            <!-- NEW SUBHEADING (Ethereal Luxury) -->
+            <p class="text-champagne-dark text-sm md:text-base uppercase tracking-[0.4em] mb-6 reveal-up" style="transition-delay: 100ms;">
+                Ethereal Luxury
+            </p>
+
+            <!-- NEW MAIN HEADING (The Gazania) -->
+            <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl font-medium text-white mb-8 leading-none mix-blend-overlay reveal-up" style="transition-delay: 200ms;">
+                The <span class="text-gradient-gold italic">Gazania</span>
+            </h1>
+
+            <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 reveal-up" style="transition-delay: 300ms;">
+                A futuristic approach to timeless celebrations. Where expansive lawns meet architectural brilliance on the Rohtak-Delhi Highway.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-6 justify-center reveal-up" style="transition-delay: 400ms;">
+                <a href="#contact" class="group relative px-10 py-4 bg-champagne-dark text-midnight font-bold tracking-widest uppercase overflow-hidden hover-trigger">
+                    <span class="relative z-10">Plan Your Event</span>
+                    <div class="absolute inset-0 bg-white transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
+                </a>
+                <a href="#contact" class="group flex items-center gap-4 px-8 py-4 text-white hover:text-champagne-dark transition-colors hover-trigger">
+                    <span class="w-12 h-12 border border-white/30 rounded-full flex items-center justify-center group-hover:border-champagne-dark group-hover:scale-110 transition-all">
+                        <i class="fas fa-play text-xs"></i>
+                    </span>
+                    <span class="uppercase tracking-widest text-sm">Request Tour</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+            <span class="text-[10px] uppercase tracking-widest">Scroll</span>
+            <div class="w-[1px] h-16 bg-gradient-to-b from-white to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <div class="py-8 bg-champagne-dark text-midnight overflow-hidden border-y border-white/10">
+        <div class="marquee-container">
+            <div class="marquee-content font-serif text-4xl md:text-6xl italic font-light tracking-tighter">
+                Weddings &nbsp; • &nbsp; Corporate Galas &nbsp; • &nbsp; Social Soirees &nbsp; • &nbsp; Destination Events &nbsp; • &nbsp; The Gazania &nbsp; • &nbsp; Weddings &nbsp; • &nbsp; Corporate Galas &nbsp; • &nbsp; Social Soirees &nbsp; • &nbsp; Destination Events &nbsp; • &nbsp;
+            </div>
+            <div class="marquee-content font-serif text-4xl md:text-6xl italic font-light tracking-tighter" aria-hidden="true">
+                Weddings &nbsp; • &nbsp; Corporate Galas &nbsp; • &nbsp; Social Soirees &nbsp; • &nbsp; Destination Events &nbsp; • &nbsp; The Gazania &nbsp; • &nbsp; Weddings &nbsp; • &nbsp; Corporate Galas &nbsp; • &nbsp; Social Soirees &nbsp; • &nbsp; Destination Events &nbsp; • &nbsp;
+            </div>
+        </div>
+    </div>
+
+    <!-- About / Stats Section -->
+    <section id="about" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-up">
+                    <h2 class="font-serif text-5xl md:text-7xl text-white mb-8 leading-tight">
+                        Beyond <br/> <span class="text-gradient-gold">Expectations</span>
+                    </h2>
+                    <p class="text-gray-400 mb-6 text-lg font-light leading-relaxed">
+                        Located on the NH-09 Rohtak-Delhi Rd, The Gazania isn't just a venue; it's an architectural statement. We blend the warmth of Indian hospitality with ultra-modern facilities.
+                    </p>
+                    <p class="text-gray-400 mb-10 font-light leading-relaxed">
+                        Imagine saying "I do" under the stars on our manicured lawns, followed by a reception in our crystal-adorned banquet halls. Every detail is curated for luxury.
+                    </p>
+
+                    <!-- Counters -->
+                    <div class="grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
+                        <div>
+                            <span class="block text-4xl font-serif text-champagne-dark counter" data-target="500">0</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Events Hosted</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-serif text-champagne-dark counter" data-target="2000">0</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Guest Capacity</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-serif text-champagne-dark counter" data-target="15">0</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Years Exp.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative reveal-up">
+                    <div class="absolute -inset-4 bg-champagne-dark/20 blur-2xl rounded-full"></div>
+                    <div class="relative z-10 glass-card p-2 rotate-2 hover:rotate-0 transition-transform duration-500 hover-trigger">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautifully decorated tables and chairs for a luxury wedding dinner." class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-10 -left-10 bg-midnight border border-white/10 p-6 rounded-full w-32 h-32 flex items-center justify-center z-20 animate-bounce-slow">
+                        <div class="text-center">
+                            <span class="block text-champagne-dark font-serif text-xl">Est.</span>
+                            <span class="block text-white font-bold">2008</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services (Glassmorphism Cards) -->
+    <section id="services" class="py-24 bg-charcoal relative overflow-hidden">
+        <!-- Decorative Circles -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-champagne-dark/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="mb-20 text-center reveal-up">
+                <span class="text-champagne-dark uppercase tracking-[0.3em] text-sm font-bold">Our Expertise</span>
+                <h2 class="font-serif text-5xl text-white mt-4">Curated Experiences</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 group hover:-translate-y-3 transition-transform duration-500 hover-trigger reveal-up">
+                    <div class="text-5xl text-champagne-dark mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+                        <i class="fa-light fa-rings-wedding"></i> <!-- Using standard font awesome class as fa-light might not load without pro -->
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Weddings</h3>
+                    <p class="text-gray-400 font-light mb-6">Bespoke wedding planning, from the Haldi ceremony to the grand reception. We turn your fairy tale into reality.</p>
+                    <a href="#" class="text-champagne-dark uppercase text-xs tracking-widest border-b border-transparent group-hover:border-champagne-dark transition-all pb-1">Learn More</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 group hover:-translate-y-3 transition-transform duration-500 hover-trigger reveal-up" style="transition-delay: 100ms;">
+                    <div class="text-5xl text-champagne-dark mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Social Events</h3>
+                    <p class="text-gray-400 font-light mb-6">Birthdays, anniversaries, and reunions hosted with flair. Impeccable service for your closest circle.</p>
+                    <a href="#" class="text-champagne-dark uppercase text-xs tracking-widest border-b border-transparent group-hover:border-champagne-dark transition-all pb-1">Learn More</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 group hover:-translate-y-3 transition-transform duration-500 hover-trigger reveal-up" style="transition-delay: 200ms;">
+                    <div class="text-5xl text-champagne-dark mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-4">Corporate</h3>
+                    <p class="text-gray-400 font-light mb-6">High-end conference facilities and gala dinners. Impress your stakeholders with our premium setting.</p>
+                    <a href="#" class="text-champagne-dark uppercase text-xs tracking-widest border-b border-transparent group-hover:border-champagne-dark transition-all pb-1">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Grid -->
+    <section class="py-24 bg-midnight">
+        <div class="container mx-auto px-6">
+             <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal-up">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-6xl text-white">World Class <br/><span class="italic text-gray-500">Amenities</span></h2>
+                </div>
+                <div class="mt-8 md:mt-0">
+                    <p class="text-gray-400 max-w-md text-right">Designed for comfort, engineered for luxury. Every facility you need for a seamless event.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10">
+                <!-- Amenity Item -->
+                <div class="bg-midnight p-10 flex flex-col items-center justify-center text-center group hover:bg-charcoal transition-colors duration-500 hover-trigger">
+                    <i class="fas fa-parking text-3xl text-gray-500 group-hover:text-champagne-dark transition-colors mb-4"></i>
+                    <span class="text-white tracking-widest uppercase text-sm">Valet Parking</span>
+                </div>
+                 <div class="bg-midnight p-10 flex flex-col items-center justify-center text-center group hover:bg-charcoal transition-colors duration-500 hover-trigger">
+                    <i class="fas fa-snowflake text-3xl text-gray-500 group-hover:text-champagne-dark transition-colors mb-4"></i>
+                    <span class="text-white tracking-widest uppercase text-sm">Climate Control</span>
+                </div>
+                 <div class="bg-midnight p-10 flex flex-col items-center justify-center text-center group hover:bg-charcoal transition-colors duration-500 hover-trigger">
+                    <i class="fas fa-utensils text-3xl text-gray-500 group-hover:text-champagne-dark transition-colors mb-4"></i>
+                    <span class="text-white tracking-widest uppercase text-sm">Gourmet Kitchen</span>
+                </div>
+                 <div class="bg-midnight p-10 flex flex-col items-center justify-center text-center group hover:bg-charcoal transition-colors duration-500 hover-trigger">
+                    <i class="fas fa-couch text-3xl text-gray-500 group-hover:text-champagne-dark transition-colors mb-4"></i>
+                    <span class="text-white tracking-widest uppercase text-sm">Bridal Suites</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery (Horizontal Slider) - UPDATED SECTION -->
+    <section id="gallery" class="py-24 bg-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="mb-16 text-center reveal-up">
+                <h2 class="font-serif text-5xl text-white">Visual Diary</h2>
+                <p class="text-gray-400 mt-2">Swipe or click the arrows to explore our 12 stunning event spaces.</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Navigation Arrows -->
+                <button id="gallery-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-midnight/70 p-4 rounded-r-full text-champagne-dark text-xl transition-all hover:bg-champagne-dark hover:text-midnight focus:outline-none hover-trigger hidden md:block">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="gallery-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-midnight/70 p-4 rounded-l-full text-champagne-dark text-xl transition-all hover:bg-champagne-dark hover:text-midnight focus:outline-none hover-trigger hidden md:block">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Scrollable Container -->
+                <div id="gallery-slider" class="flex gap-8 gallery-scroll-container overflow-x-scroll snap-x scroll-smooth pb-4">
+                    <!-- Gallery Items (12 Total) -->
+                    <!-- Item 1 -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautifully decorated wedding tables set in a grand hall with floral centerpieces." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">The Grand Lawn</div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 50ms;">
+                        <img src="https://images.unsplash.com/photo-1464002255394-8c5508d513f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intimate close-up of wedding reception details, including gold cutlery and name cards." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Reception Details</div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 100ms;">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior view of the main air-conditioned banquet hall with high ceilings and chandeliers." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Banquet Interior</div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 150ms;">
+                        <img src="https://images.unsplash.com/photo-1507915977619-6ccfe8003ae6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Detailed shot of event decor, showcasing elegant floral arrangements and soft lighting." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Decor Setup</div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Night view of the outdoor party lawns with festive lights and seating arrangements." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Outdoor Vibes</div>
+                    </div>
+                    <!-- Item 6 (Duplicate of 1) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 250ms;">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding ceremony setup under an elegant canopy on the main lawn." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Elegant Lighting</div>
+                    </div>
+                    <!-- Item 7 (Duplicate of 2) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 300ms;">
+                        <img src="https://images.unsplash.com/photo-1464002255394-8c5508d513f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Close up view of sophisticated table setting for an intimate gathering." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Intimate Settings</div>
+                    </div>
+                    <!-- Item 8 (Duplicate of 3) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 350ms;">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="View of the banquet hall stage with dramatic floral arches." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Floral Arches</div>
+                    </div>
+                    <!-- Item 9 (Duplicate of 4) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 400ms;">
+                        <img src="https://images.unsplash.com/photo-1507915977619-6ccfe8003ae6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="A cocktail bar setup ready for guests, highlighting vibrant colors and modern design." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Vibrant Colors</div>
+                    </div>
+                    <!-- Item 10 (Duplicate of 5) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 450ms;">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bride and groom standing on the lawn during a golden hour sunset photoshoot." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Sunset Photoshoot</div>
+                    </div>
+                    <!-- Item 11 (Duplicate of 1) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 500ms;">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="View of the raised main stage area fully decorated with luxurious fabric and lighting." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Stage Design</div>
+                    </div>
+                    <!-- Item 12 (Duplicate of 2) -->
+                    <div class="gallery-item relative group overflow-hidden rounded-lg hover-trigger reveal-up" style="transition-delay: 550ms;">
+                        <img src="https://images.unsplash.com/photo-1464002255394-8c5508d513f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elegant close-up of table settings and guest favors for a formal reception." class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-champagne-dark/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-serif italic text-lg opacity-0 group-hover:opacity-100 transition-opacity">Table Settings</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="relative py-24 bg-midnight overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 lg:p-16 reveal-up">
+                
+                <!-- Form Side -->
+                <div class="lg:w-1/2">
+                    <h2 class="font-serif text-4xl text-white mb-2">Begin Your Journey</h2>
+                    <p class="text-gray-400 mb-8">Fill in your details and let us craft your perfect day.</p>
+                    
+                    <!-- Form replaced with a div for WhatsApp integration -->
+                    <div class="space-y-6" id="contact-form-area">
+                        <div class="group">
+                            <input type="text" class="w-full bg-transparent border-b border-gray-600 py-3 text-white focus:outline-none focus:border-champagne-dark transition-colors placeholder-transparent" id="name-input" placeholder="Name">
+                            <label for="name-input" class="text-sm text-gray-400 uppercase tracking-widest cursor-text group-focus-within:text-champagne-dark transition-colors">Your Name</label>
+                        </div>
+                        <div class="group">
+                             <input type="tel" class="w-full bg-transparent border-b border-gray-600 py-3 text-white focus:outline-none focus:border-champagne-dark transition-colors placeholder-transparent" id="phone-input" placeholder="Phone">
+                            <label for="phone-input" class="text-sm text-gray-400 uppercase tracking-widest cursor-text group-focus-within:text-champagne-dark transition-colors">Phone Number</label>
+                        </div>
+                        <div class="group">
+                            <select class="w-full bg-transparent border-b border-gray-600 py-3 text-white focus:outline-none focus:border-champagne-dark transition-colors" id="event-type-select">
+                                <option class="bg-midnight">Wedding</option>
+                                <option class="bg-midnight">Reception</option>
+                                <option class="bg-midnight">Corporate</option>
+                                <option class="bg-midnight">Birthday / Social Event</option>
+                            </select>
+                            <label class="text-sm text-gray-400 uppercase tracking-widest cursor-text group-focus-within:text-champagne-dark transition-colors">Event Type</label>
+                        </div>
+                        
+                        <!-- New WhatsApp Button -->
+                        <button type="button" id="whatsapp-btn" class="mt-8 w-full py-4 bg-[#25D366] text-white font-bold tracking-widest uppercase hover:bg-white hover:text-[#25D366] transition-colors hover-trigger flex items-center justify-center gap-3">
+                            <i class="fab fa-whatsapp text-lg"></i> Send Quote Request
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Info Side -->
+                <div class="lg:w-1/2 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-white uppercase tracking-widest font-bold mb-6">Visit Us</h3>
+                        <p class="text-gray-400 leading-loose mb-8">
+                            NH-09, Rohtak - Delhi Rd,<br>
+                            Near Sai Mandir, Kharawar,<br>
+                            Haryana 124021
+                        </p>
+                        
+                        <h3 class="text-white uppercase tracking-widest font-bold mb-6">Connect</h3>
+                        <p class="text-gray-400 leading-loose">
+                            +91-98765-43210<br>
+                            bookings@thegazania.com
+                        </p>
+                    </div>
+                    
+                    <div class="mt-10 h-48 w-full rounded-xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-500 hover-trigger">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13994.262771043515!2d76.6300!3d28.8600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDUxJzM2LjAiTiA3NsKwMzcnNDguMCJF!5e0!3m2!1sen!2sin!4v1625555555555!5m2!1sen!2sin&q=NH-09+Rohtak+Delhi+Rd+Kharawar+Haryana" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <span class="font-serif text-4xl md:text-6xl text-champagne-dark stroked-text block mb-8">THE GAZANIA</span>
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="#" class="text-gray-400 hover:text-champagne-dark transition-colors hover-trigger"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-champagne-dark transition-colors hover-trigger"><i class="fab fa-facebook text-2xl"></i></a>
+                <!-- WhatsApp link removed as requested -->
+            </div>
+            <p class="text-gray-600 text-sm">© 2024 The Gazania Events. Designed for Luxury.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        
+        // Move cursor
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Smooth lag for outline
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // Hover interactions
+        document.querySelectorAll('.hover-trigger').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                cursorOutline.style.width = '60px';
+                cursorOutline.style.height = '60px';
+                cursorOutline.style.backgroundColor = 'rgba(197, 160, 89, 0.1)';
+                cursorOutline.style.borderColor = 'transparent';
+            });
+            item.addEventListener('mouseleave', () => {
+                cursorOutline.style.width = '40px';
+                cursorOutline.style.height = '40px';
+                cursorOutline.style.backgroundColor = 'transparent';
+                cursorOutline.style.borderColor = 'rgba(197, 160, 89, 0.5)';
+            });
+        });
+
+        // 2. Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        });
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        });
+        // Close on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                 mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            });
+        });
+
+        // 3. Intersection Observer for Scroll Reveals
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // 4. Number Counter Animation
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const speed = 50; // The lower the slower
+                        
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const inc = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + inc);
+                                setTimeout(updateCount, 30);
+                            } else {
+                                counter.innerText = target + "+";
+                            }
+                        };
+                        updateCount();
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('#about');
+        if(statsSection) statsObserver.observe(statsSection);
+        
+        // 5. Gallery Slider Navigation Logic
+        const gallerySlider = document.getElementById('gallery-slider');
+        const prevButton = document.getElementById('gallery-prev');
+        const nextButton = document.getElementById('gallery-next');
+
+        if (gallerySlider) {
+            // Calculated scroll distance based on screen size (or a constant value)
+            const scrollDistance = 350; 
+
+            prevButton.addEventListener('click', () => {
+                gallerySlider.scrollBy({
+                    left: -scrollDistance,
+                    behavior: 'smooth'
+                });
+            });
+
+            nextButton.addEventListener('click', () => {
+                gallerySlider.scrollBy({
+                    left: scrollDistance,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // 6. WhatsApp Integration Logic
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        const nameInput = document.getElementById('name-input');
+        const phoneInput = document.getElementById('phone-input');
+        const eventTypeSelect = document.getElementById('event-type-select');
+
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', () => {
+                const name = nameInput.value.trim() || 'Potential Client';
+                const phone = phoneInput.value.trim() || 'No phone number provided in the form.';
+                const eventType = eventTypeSelect.value;
+                const venuePhone = '919876543210'; // The Gazania's number
+
+                // Construct a pre-filled message
+                const message = `Hello The Gazania, my name is ${name}. I am inquiring about booking a *${eventType}*. My contact number is ${phone}. Could you please send me a quote and package details?`;
+                
+                // Encode the message for the URL
+                const encodedMessage = encodeURIComponent(message);
+                
+                // Construct the WhatsApp URL
+                const whatsappUrl = `https://wa.me/${venuePhone}?text=${encodedMessage}`;
+                
+                // Open in a new tab
+                window.open(whatsappUrl, '_blank');
+            });
+        }
+
+    </script>
+</body>
+</html>
